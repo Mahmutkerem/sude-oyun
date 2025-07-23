@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("fotolar/WhatsApp Görsel 2025-07-24 saat 01.46.18_43dae109.jpg") no-repeat center center;
+  background-size: 50% auto;
+  overflow: hidden;
+  position: relative;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* yatayda ortalar */
+  gap: 30px; /* aralarındaki boşluk */
+  position: relative;
+  z-index: 1;
+}
+
+#loveBox, #gitBox {
+  width: 200px;
+  height: 80px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  user-select: none;
+  cursor: pointer;
+  background: #8e44ad;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+#gitBox {
+  background: #7d3c98;
+  color: #d9b3ff;
+}
+
+#loveBox:hover {
+  background: #9b59b6;
+}
+
+#gitBox:hover {
+  background: #9b59b6;
+}
+
+#card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #8e44ad, #e74c3c);
+  color: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  font-size: 2rem;
+  text-align: center;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+#closeBtn {
+  margin-top: 20px;
+  background: white;
+  color: #8e44ad;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#closeBtn:hover {
+  background-color: #dcd6f7;
+}
+
+.heart {
+  position: fixed;
+  font-size: 24px;
+  animation: fall 3s linear forwards;
+  z-index: 999;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(600px) scale(1.5);
+  }
+}
